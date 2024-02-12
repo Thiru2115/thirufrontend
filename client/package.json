@@ -2,7 +2,7 @@
   "name": "zomoto",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8900/",
+  "proxy": "https://black-tuna-wear.cyclic.app/",
   "dependencies": {
     "@react-oauth/google": "^0.12.1",
     "@testing-library/jest-dom": "^5.17.0",
