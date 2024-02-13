@@ -35,7 +35,7 @@ const Header = () => {
   const Signup = async () => {
     const Data = { username, email, password };
     try {
-      const response = await axios.post("/signup", Data);
+      const response = await axios.post("https://black-tuna-wear.cyclic.app/signup", Data);
       console.log(response.data.username, "Signup SuccessFully");
       setsignupOpen(false);
     } catch (err) {
@@ -45,7 +45,7 @@ const Header = () => {
 
   const Login = async () => {
     try {
-      const response = await axios.post("/login", {
+      const response = await axios.post("https://black-tuna-wear.cyclic.app/login", {
         email: email,
         password: password,
       });
