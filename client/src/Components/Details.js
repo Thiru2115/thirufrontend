@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../Style/details.css";
+import "../Style/details.css";  
 import image1 from "../Assets/img1.jpg";
 import image2 from "../Assets/img2.jpg";
 import image3 from "../Assets/img3.jpg";
@@ -34,7 +34,7 @@ function Details() {
     const parseQuery = queryString.parse(window.location.search);
     const parseId = parseQuery.hotel;
 
-    axios.get(`/filterbyid/${parseId}`).then((response) => {
+    axios.get(`https://black-tuna-wear.cyclic.app/filterbyid/${parseId}`).then((response) => {
       setList(response.data.name);
       setPhoneNumber(response.data.contact_number);
       setLocality(response.data.locality);
