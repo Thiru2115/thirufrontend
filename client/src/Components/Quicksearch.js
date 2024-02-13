@@ -8,7 +8,7 @@ function Quicksearch() {
   useEffect(() => {
     const fetchMeals = async () => {
       try {
-        const response = await axios.get("/getAllMeals");
+        const response = await axios.get("https://black-tuna-wear.cyclic.app/getAllMeals");
         setMeals(response.data);
       } catch (error) {
         console.error(error);
