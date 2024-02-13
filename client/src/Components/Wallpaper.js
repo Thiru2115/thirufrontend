@@ -14,7 +14,7 @@ function Wallpaper() {
   useEffect(() => {
     const fetchData1 = async () => {
       try {
-        const response = await axios.get("/getAllLocations");
+        const response = await axios.get("https://black-tuna-wear.cyclic.app/getAllLocations");
         const uniqueCities = response.data.reduce((acc, curr) => {
           if (!acc.some((item) => item.name === curr.name)) {
             acc.push(curr);
@@ -33,7 +33,7 @@ function Wallpaper() {
   useEffect(() => {
     const fetchData2 = async () => {
       try {
-        const response = await axios.get("/getAllHotels");
+        const response = await axios.get("https://black-tuna-wear.cyclic.app/getAllHotels");
         setHotel(response.data);
       } catch (error) {
         console.error(error);
