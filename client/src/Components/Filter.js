@@ -16,7 +16,7 @@ function Filter() {
   const navigation = useNavigate();
   useEffect(() => {
     axios
-      .get("/getAllHotels")
+      .get("https://black-tuna-wear.cyclic.app/getAllHotels")
       .then((response) => {
         setLocationFetch(response.data);
       })
@@ -28,7 +28,7 @@ function Filter() {
   useEffect(() => {
     const LocationDataByFilterPage = async () => {
       try {
-        const response = await axios.get("/getAllLocations");
+        const response = await axios.get("https://black-tuna-wear.cyclic.app/getAllLocations");
         const uniqueCities = response.data.reduce((acc, curr) => {
           if (!acc.some((item) => item.name === curr.name)) {
             acc.push(curr);
