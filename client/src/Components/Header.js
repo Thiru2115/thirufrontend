@@ -130,7 +130,7 @@ const Header = () => {
                   setGlogin(true);
                   const result = jwtDecode(credentialResponse.credential);
                   setUserName(result.given_name);
-                  console.log(username);
+                  console.log(result.given_name);
                 }}
                 onError={() => {
                   console.log("Login Failed");
